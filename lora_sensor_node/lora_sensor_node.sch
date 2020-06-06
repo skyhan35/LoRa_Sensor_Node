@@ -24,4 +24,162 @@ F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/ATmega328_P%20AVR%20MCU%20w
 	1    5350 3400
 	1    0    0    -1  
 $EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5EDB9237
+P 5350 1650
+F 0 "#PWR?" H 5350 1500 50  0001 C CNN
+F 1 "VCC" H 5365 1823 50  0000 C CNN
+F 2 "" H 5350 1650 50  0001 C CNN
+F 3 "" H 5350 1650 50  0001 C CNN
+	1    5350 1650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EDB95A0
+P 5350 5150
+F 0 "#PWR?" H 5350 4900 50  0001 C CNN
+F 1 "GND" H 5355 4977 50  0000 C CNN
+F 2 "" H 5350 5150 50  0001 C CNN
+F 3 "" H 5350 5150 50  0001 C CNN
+	1    5350 5150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 1900 5350 1750
+Wire Wire Line
+	5450 1900 5450 1750
+Wire Wire Line
+	5450 1750 5350 1750
+Connection ~ 5350 1750
+Wire Wire Line
+	5350 1750 5350 1650
+Wire Wire Line
+	4750 1750 5350 1750
+Wire Wire Line
+	4750 1750 4750 2200
+Wire Wire Line
+	5350 4900 5350 5150
+$Comp
+L Switch:SW_Push SW?
+U 1 1 5EDBAF29
+P 6750 3700
+F 0 "SW?" H 6750 3985 50  0000 C CNN
+F 1 "SW_Push" H 6750 3894 50  0000 C CNN
+F 2 "" H 6750 3900 50  0001 C CNN
+F 3 "~" H 6750 3900 50  0001 C CNN
+	1    6750 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5EDBDCFF
+P 7050 3700
+F 0 "#PWR?" H 7050 3450 50  0001 C CNN
+F 1 "GND" V 7055 3572 50  0000 R CNN
+F 2 "" H 7050 3700 50  0001 C CNN
+F 3 "" H 7050 3700 50  0001 C CNN
+	1    7050 3700
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6950 3700 7050 3700
+$Comp
+L power:VCC #PWR?
+U 1 1 5EDBFA3F
+P 6400 4150
+F 0 "#PWR?" H 6400 4000 50  0001 C CNN
+F 1 "VCC" H 6415 4323 50  0000 C CNN
+F 2 "" H 6400 4150 50  0001 C CNN
+F 3 "" H 6400 4150 50  0001 C CNN
+	1    6400 4150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6400 3950 6400 3700
+Wire Wire Line
+	5950 3700 6400 3700
+Connection ~ 6400 3700
+Wire Wire Line
+	6400 3700 6550 3700
+$Comp
+L Device:C C?
+U 1 1 5EDC7967
+P 9050 2400
+F 0 "C?" V 8798 2400 50  0000 C CNN
+F 1 "C" V 8889 2400 50  0000 C CNN
+F 2 "" H 9088 2250 50  0001 C CNN
+F 3 "~" H 9050 2400 50  0001 C CNN
+	1    9050 2400
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 5EDC9A3E
+P 9050 2800
+F 0 "C?" V 8798 2800 50  0000 C CNN
+F 1 "C" V 8889 2800 50  0000 C CNN
+F 2 "" H 9088 2650 50  0001 C CNN
+F 3 "~" H 9050 2800 50  0001 C CNN
+	1    9050 2800
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:Crystal Y?
+U 1 1 5EDCCC70
+P 8600 2600
+F 0 "Y?" V 8554 2731 50  0000 L CNN
+F 1 "Crystal" V 8645 2731 50  0000 L CNN
+F 2 "" H 8600 2600 50  0001 C CNN
+F 3 "~" H 8600 2600 50  0001 C CNN
+	1    8600 2600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8900 2400 8600 2400
+Wire Wire Line
+	8600 2400 8600 2450
+Wire Wire Line
+	8900 2800 8600 2800
+Wire Wire Line
+	8600 2800 8600 2750
+$Comp
+L power:GND #PWR?
+U 1 1 5EDD73FB
+P 9300 2600
+F 0 "#PWR?" H 9300 2350 50  0001 C CNN
+F 1 "GND" V 9305 2472 50  0000 R CNN
+F 2 "" H 9300 2600 50  0001 C CNN
+F 3 "" H 9300 2600 50  0001 C CNN
+	1    9300 2600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9200 2400 9300 2400
+Wire Wire Line
+	9300 2400 9300 2600
+Wire Wire Line
+	9200 2800 9300 2800
+Wire Wire Line
+	9300 2800 9300 2600
+Connection ~ 9300 2600
+Text GLabel 6050 2800 2    50   Input ~ 0
+XTAL1
+Text GLabel 8500 2400 0    50   Input ~ 0
+XTAL1
+Text GLabel 6050 2900 2    50   Input ~ 0
+XTAL2
+Text GLabel 8500 2800 0    50   Input ~ 0
+XTAL2
+Wire Wire Line
+	5950 2800 6050 2800
+Wire Wire Line
+	5950 2900 6050 2900
+Wire Wire Line
+	8600 2400 8500 2400
+Connection ~ 8600 2400
+Wire Wire Line
+	8600 2800 8500 2800
+Connection ~ 8600 2800
 $EndSCHEMATC
